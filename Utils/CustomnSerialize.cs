@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GenerationCodeTool.Common
+namespace Utils
 {
-    class test
+    public class CustomnSerialize : ISerialize
     {
     }
 }
