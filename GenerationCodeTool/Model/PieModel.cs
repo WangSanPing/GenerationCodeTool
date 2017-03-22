@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace GenerationCodeTool.Model.Test
+namespace GenerationCodeTool.Model
 {
     /// <summary>
     /// 饼图
@@ -15,14 +15,13 @@ namespace GenerationCodeTool.Model.Test
         private string titleData;
 
         /// <summary>
-        /// 标题数据
+        /// 图例数据
         /// </summary>
         public string TitleData
         {
             get
             {
-
-                // 给title复赋值
+                // 给图例数据赋值
                 if (PieDataList != null)
                 {
                     titleData = "[";
@@ -62,7 +61,6 @@ namespace GenerationCodeTool.Model.Test
         /// <summary>
         /// 数据
         /// </summary>
-        //[XmlElement(typeof(List<PieData>))]
         public List<PieData> PieDataList
         {
             get
@@ -78,5 +76,6 @@ namespace GenerationCodeTool.Model.Test
         }
 
         private List<PieData> pieData;
+
     }
 }

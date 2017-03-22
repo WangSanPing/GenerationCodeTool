@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace GenerationCodeTool.Model.Test
+namespace GenerationCodeTool.Model
 {
     public class ColumnData
     {
@@ -30,13 +30,12 @@ namespace GenerationCodeTool.Model.Test
             }
         }
 
-        private List<string> columnDataDetail;
+        private string columnDataDetail;
 
-        [XmlArrayItem("item")]
         /// <summary>
         /// 要展示的数据
         /// </summary>
-        public List<string> ColumnDataDetail
+        public string ColumnDataDetail
         {
             get
             {

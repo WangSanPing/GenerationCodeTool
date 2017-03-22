@@ -49,7 +49,7 @@
             // 
             // btnColumn
             // 
-            this.btnColumn.Location = new System.Drawing.Point(103, 226);
+            this.btnColumn.Location = new System.Drawing.Point(101, 164);
             this.btnColumn.Name = "btnColumn";
             this.btnColumn.Size = new System.Drawing.Size(75, 23);
             this.btnColumn.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // btnPie
             // 
-            this.btnPie.Location = new System.Drawing.Point(197, 226);
+            this.btnPie.Location = new System.Drawing.Point(195, 164);
             this.btnPie.Name = "btnPie";
             this.btnPie.Size = new System.Drawing.Size(75, 23);
             this.btnPie.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // btnGrid
             // 
-            this.btnGrid.Location = new System.Drawing.Point(12, 226);
+            this.btnGrid.Location = new System.Drawing.Point(10, 164);
             this.btnGrid.Name = "btnGrid";
             this.btnGrid.Size = new System.Drawing.Size(75, 23);
             this.btnGrid.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(197, 182);
+            this.button2.Location = new System.Drawing.Point(195, 220);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -89,7 +89,7 @@
             // 
             // loadColumn
             // 
-            this.loadColumn.Location = new System.Drawing.Point(103, 182);
+            this.loadColumn.Location = new System.Drawing.Point(101, 220);
             this.loadColumn.Name = "loadColumn";
             this.loadColumn.Size = new System.Drawing.Size(75, 23);
             this.loadColumn.TabIndex = 5;
@@ -99,7 +99,7 @@
             // 
             // btnLoadGrid
             // 
-            this.btnLoadGrid.Location = new System.Drawing.Point(12, 182);
+            this.btnLoadGrid.Location = new System.Drawing.Point(10, 220);
             this.btnLoadGrid.Name = "btnLoadGrid";
             this.btnLoadGrid.Size = new System.Drawing.Size(75, 23);
             this.btnLoadGrid.TabIndex = 6;

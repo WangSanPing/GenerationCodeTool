@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace GenerationCodeTool.Model.Test
+namespace GenerationCodeTool.Model
 {
     /// <summary>
     /// 图形Model
     /// </summary>
-    public class GraphModel : BaseModel
+    public class GraphModel
     {
         /// <summary>
         /// 标题配置
@@ -30,27 +30,21 @@ namespace GenerationCodeTool.Model.Test
             }
         }
 
-        /// <summary>
-        /// 图表类型
-        /// 1：饼图
-        /// 2：柱状图
-        /// </summary>
-        private string graphType;
+        private int isShowTitle;
 
         /// <summary>
-        /// 图表类型
-        /// 1：饼图
-        /// 2：柱状图
-        public string GraphType
+        /// 是否需要展示标题
+        /// </summary>
+        public int IsShowTitle
         {
             get
             {
-                return graphType;
+                return isShowTitle;
             }
 
             set
             {
-                graphType = value;
+                isShowTitle = value;
             }
         }
     }
