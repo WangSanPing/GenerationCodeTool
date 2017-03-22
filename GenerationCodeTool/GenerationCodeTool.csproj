@@ -70,16 +70,16 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\BaseModel.cs" />
-    <Compile Include="Model\ColumnData.cs" />
-    <Compile Include="Model\ColumnModel.cs" />
-    <Compile Include="Model\FieldInfoModel.cs" />
-    <Compile Include="Model\GraphModel.cs" />
-    <Compile Include="Model\GridModel.cs" />
-    <Compile Include="Model\PieData.cs" />
-    <Compile Include="Model\PieModel.cs" />
-    <Compile Include="Model\Title.cs" />
-    <Compile Include="Model\XmlTest.cs" />
+    <Compile Include="Model\test\BaseModel.cs" />
+    <Compile Include="Model\test\ColumnData.cs" />
+    <Compile Include="Model\test\ColumnModel.cs" />
+    <Compile Include="Model\test\FieldInfoModel.cs" />
+    <Compile Include="Model\test\GraphModel.cs" />
+    <Compile Include="Model\test\GridModel.cs" />
+    <Compile Include="Model\test\PieData.cs" />
+    <Compile Include="Model\test\PieModel.cs" />
+    <Compile Include="Model\test\Title.cs" />
+    <Compile Include="Model\test\XmlTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Form1.cs">
@@ -117,9 +117,7 @@
       <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\test\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
