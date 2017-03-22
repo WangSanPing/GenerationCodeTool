@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace GenerationCodeTool.Model
+namespace GenerationCodeTool.Model.Test
 {
     /// <summary>
     /// 基类

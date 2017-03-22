@@ -70,16 +70,16 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\test\BaseModel.cs" />
-    <Compile Include="Model\test\ColumnData.cs" />
-    <Compile Include="Model\test\ColumnModel.cs" />
-    <Compile Include="Model\test\FieldInfoModel.cs" />
-    <Compile Include="Model\test\GraphModel.cs" />
-    <Compile Include="Model\test\GridModel.cs" />
-    <Compile Include="Model\test\PieData.cs" />
-    <Compile Include="Model\test\PieModel.cs" />
-    <Compile Include="Model\test\Title.cs" />
-    <Compile Include="Model\test\XmlTest.cs" />
+    <Compile Include="Model\Test\BaseModel.cs" />
+    <Compile Include="Model\Test\ColumnData.cs" />
+    <Compile Include="Model\Test\ColumnModel.cs" />
+    <Compile Include="Model\Test\FieldInfoModel.cs" />
+    <Compile Include="Model\Test\GraphModel.cs" />
+    <Compile Include="Model\Test\GridModel.cs" />
+    <Compile Include="Model\Test\PieData.cs" />
+    <Compile Include="Model\Test\PieModel.cs" />
+    <Compile Include="Model\Test\Title.cs" />
+    <Compile Include="Model\Test\XmlTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Form1.cs">
@@ -87,6 +87,12 @@
     </Compile>
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TestWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TestWindow.Designer.cs">
+      <DependentUpon>TestWindow.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -100,6 +106,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\TestWindow.resx">
+      <DependentUpon>TestWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

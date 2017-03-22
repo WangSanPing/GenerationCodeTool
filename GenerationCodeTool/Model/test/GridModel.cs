@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GenerationCodeTool.Model
+namespace GenerationCodeTool.Model.Test
 {
     /// <summary>
     /// 列表

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GenerationCodeTool.Model
+namespace GenerationCodeTool.Model.Test
 {
     /* 
   Licensed under the Apache License, Version 2.0
