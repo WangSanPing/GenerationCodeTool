@@ -132,5 +132,12 @@ namespace GenerationCodeTool
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StringReader xmlReader = Utils.XmlUtil.getStrXml(@"c:\StandardXml\test.xml");
+            XmlSerializer xmlSer = new XmlSerializer(typeof(GenerationModel));
+            GenerationModel generationModel = (GenerationModel)xmlSer.Deserialize(xmlReader);
+            xmlReader.Close();
+        }
     }
 }

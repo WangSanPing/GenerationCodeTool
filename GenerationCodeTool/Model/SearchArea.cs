@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace GenerationCodeTool.Model
 {
     public class SearchArea
     {
-        List<SerachField> serachField;
+        private List<SerachField> serachFieldList;
 
-        public List<SerachField> SerachField
+        public List<SerachField> SerachFieldList
         {
             get
             {
-                return serachField;
+                return serachFieldList;
             }
 
             set
             {
-                serachField = value;
+                serachFieldList = value;
             }
         }
     }

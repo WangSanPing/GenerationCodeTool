@@ -6,6 +6,7 @@ using System.Xml.Serialization;
 
 namespace GenerationCodeTool.Model
 {
+    [XmlRoot(ElementName = "GridArea")]
     public class GridArea
     {
         private List<FieldInfoModel> fieldInfoList;
@@ -26,5 +27,6 @@ namespace GenerationCodeTool.Model
                 fieldInfoList = value;
             }
         }
+
     }
 }

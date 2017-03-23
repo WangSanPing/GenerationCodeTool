@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace GenerationCodeTool.Model
 {
@@ -64,7 +65,7 @@ namespace GenerationCodeTool.Model
             }
         }
 
-        private SearchArea searchArea;
+        private SearchArea searchAreas;
 
         // 查询区域
         /// <summary>
@@ -74,12 +75,12 @@ namespace GenerationCodeTool.Model
         {
             get
             {
-                return searchArea;
+                return searchAreas;
             }
 
             set
             {
-                searchArea = value;
+                searchAreas = value;
             }
         }
 

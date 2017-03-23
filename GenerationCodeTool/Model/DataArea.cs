@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace GenerationCodeTool.Model
 {
@@ -49,5 +50,44 @@ namespace GenerationCodeTool.Model
         }
 
         private int chartIsShow;
+
+        private GridArea gridArea;
+
+        // 列表区域
+        /// <summary>
+        /// 列表区域
+        /// </summary>
+        public GridArea GridArea
+        {
+            get
+            {
+                return gridArea;
+            }
+
+            set
+            {
+                gridArea = value;
+            }
+        }
+
+        // 图表区域
+        /// <summary>
+        /// 图表区域
+        /// </summary>
+        public ChartArea ChartArea
+        {
+            get
+            {
+                return chartArea;
+            }
+
+            set
+            {
+                chartArea = value;
+            }
+        }
+
+
+        private ChartArea chartArea;
     }
 }

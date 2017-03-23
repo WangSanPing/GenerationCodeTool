@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GenerationModel>
+  <Id>11</Id>
+  <!--模块名-->
+  <FunName>列表测试</FunName>
+  <!--数据模型表名-->
+  <TableName>grid_table</TableName>
+  <!-- 查询区域 -->
+  <SearchAreas>
+  <SerachFieldList>
+    <SerachField>
+      <!--来源类型 1:维度表(生成控件) 2:模型纬度字段 -->
+      <SourceType>1</SourceType>
+      <!--控件类型，1:文本 2:下拉框 -->
+      <CategoryType>1</CategoryType>
+      <!--查询方式，1:单项精确匹配 "=" 2:单项模糊匹配 "%" 3:多项匹配 "in()" -->
+      <SerachType>1</SerachType>
+      <!-- 显示别名 -->
+      <Alias>显示别名</Alias>
+      <!-- 模型纬度字段 -->
+      <Field>模型纬度字段</Field>
+      <!-- 长度 -->
+      <Length>100</Length>
+      <!-- 宽度 -->
+      <Width>100</Width>
+      <!-- 排序 -->
+      <Order>1</Order>
+      <!-- 第几列 -->
+      <Column>2</Column>
+    </SerachField>
+	    <SerachField>
+		
+      <!--来源类型 1:维度表(生成控件) 2:模型纬度字段 -->
+      <SourceType>1</SourceType>
+      <!--控件类型，1:文本 2:下拉框 -->
+      <CategoryType>1</CategoryType>
+      <!--查询方式，1:单项精确匹配 "=" 2:单项模糊匹配 "%" 3:多项匹配 "in()" -->
+      <SerachType>1</SerachType>
+      <!-- 显示别名 -->
+      <Alias>显示别名</Alias>
+      <!-- 模型纬度字段 -->
+      <Field>模型纬度字段</Field>
+      <!-- 长度 -->
+      <Length>100</Length>
+      <!-- 宽度 -->
+      <Width>100</Width>
+      <!-- 排序 -->
+      <Order>1</Order>
+      <!-- 第几列 -->
+      <Column>2</Column>
+    </SerachField>
+	  </SerachFieldList>
+  </SearchAreas>
+
+  <!--展示区域-->
+  <DataArea>
+    <!-- 列表区域是否展示 -->
+    <GridIsShow>1</GridIsShow>
+    <!-- 图例区域是否展示 -->
+    <ChartIsShow>1</ChartIsShow>
+    <!-- 列表区域 -->
+    <GridArea>
+	<FieldInfoList>
+      <FieldInfoModel>
+        <!--数据库中的字段名-->
+        <Field>数据库中的字段名</Field>
+        <!--是否是下钻字段 0：否，1：是-->
+        <IsAnalysis>1</IsAnalysis>
+        <!--是否是查询条件 0：否，1：是-->
+        <IsSearch>1</IsSearch>
+        <!-- 长度 -->
+        <Length>100</Length>
+        <!-- 宽度 -->
+        <Width>100</Width>
+        <!-- 排序 -->
+        <Order>1</Order>
+        <!--是否需要展示 0：否，1：是-->
+        <IsShow>1</IsShow>
+        <!--展示规则-->
+        <FieldRule>字段展示规则0</FieldRule>
+      </FieldInfoModel>
+            <FieldInfoModel>
+        <!--数据库中的字段名-->
+        <Field>数据库中的字段名1111111</Field>
+        <!--是否是下钻字段 0：否，1：是-->
+        <IsAnalysis>1</IsAnalysis>
+        <!--是否是查询条件 0：否，1：是-->
+        <IsSearch>1</IsSearch>
+        <!-- 长度 -->
+        <Length>100</Length>
+        <!-- 宽度 -->
+        <Width>100</Width>
+        <!-- 排序 -->
+        <Order>2</Order>
+        <!--是否需要展示 0：否，1：是-->
+        <IsShow>1</IsShow>
+        <!--展示规则-->
+        <FieldRule>字段展示规则</FieldRule>
+      </FieldInfoModel>
+	        <FieldInfoModel>
+        <!--数据库中的字段名-->
+        <Field>数据库中的字段名2222222</Field>
+        <!--是否是下钻字段 0：否，1：是-->
+        <IsAnalysis>1</IsAnalysis>
+        <!--是否是查询条件 0：否，1：是-->
+        <IsSearch>1</IsSearch>
+        <!-- 长度 -->
+        <Length>100</Length>
+        <!-- 宽度 -->
+        <Width>100</Width>
+        <!-- 排序 -->
+        <Order>1</Order>
+        <!--是否需要展示 0：否，1：是-->
+        <IsShow>1</IsShow>
+        <!--展示规则-->
+        <FieldRule>字段展示规则0</FieldRule>
+      </FieldInfoModel>
+	  				</FieldInfoList>
+
+    </GridArea>
+    <!--图例展示-->
+    <ChartArea>
+      <ChartType>
+        <!-- 图例类型，pie:饼图，bar:柱状图 -->
+      </ChartType>
+      <!--饼图-->
+      <PieModel>
+        <Name>我是饼图</Name>
+        <Title>
+          <TitleText>饼图标题</TitleText>
+          <TitleSubText>饼图子标题</TitleSubText>
+          <X>center</X>
+		  <isShowTitle>1</isShowTitle>
+        </Title>
+        <PieDataList>
+          <PieData>
+            <Name>展示的名称</Name>
+            <Value>要展示的字段</Value>
+          </PieData>
+          <PieData>
+            <Name>饼图数据1</Name>
+            <Value>4348</Value>
+          </PieData>
+          <PieData>
+            <Name>饼图数据2</Name>
+            <Value>121</Value>
+          </PieData>
+          <PieData>
+            <Name>饼图数据3</Name>
+            <Value>1203</Value>
+          </PieData>
+          <PieData>
+            <Name>饼图数据4</Name>
+            <Value>2385</Value>
+          </PieData>
+        </PieDataList>
+      </PieModel>
+      <!--柱状图-->
+      <ColumnModel>
+        <Title>
+          <TitleText>柱状图标题</TitleText>
+          <TitleSubText>柱状图子标题</TitleSubText>
+          <X>center</X>
+        </Title>
+        <ColumnDataList>
+          <ColumnData>
+            <Name>tooltips11</Name>
+            <Type>bar</Type>
+            <!--要展示的数据字段-->
+            <ColumnDataDetail>
+              Reject_Amount
+            </ColumnDataDetail>
+          </ColumnData>
+          <ColumnData>
+            <Name>tooltips22</Name>
+            <Type>bar</Type>
+            <ColumnDataDetail>
+              Amount
+            </ColumnDataDetail>
+          </ColumnData>
+        </ColumnDataList>
+      </ColumnModel>
+    </ChartArea>
+  </DataArea>
+</GenerationModel>
