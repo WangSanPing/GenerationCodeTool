@@ -64,6 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefaultSetting.cs" />
+    <Compile Include="Implement\GridImpl.cs" />
+    <Compile Include="InterFace\IModule.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +76,7 @@
     <Compile Include="Model\ChartArea.cs" />
     <Compile Include="Model\ColumnModel.cs" />
     <Compile Include="Model\DataArea.cs" />
+    <Compile Include="Model\GeneralPropertyModel.cs" />
     <Compile Include="Model\GenerationModel.cs" />
     <Compile Include="Model\GridArea.cs" />
     <Compile Include="Model\SearchArea.cs" />
@@ -135,6 +139,7 @@
   <ItemGroup>
     <Content Include="xmlTemplate\GenerationModelTemplate.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

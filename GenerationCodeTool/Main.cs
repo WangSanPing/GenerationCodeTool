@@ -14,6 +14,8 @@ using System.Xml.Linq;
 using System.IO;
 using System.Xml.Serialization;
 using System.Collections;
+using GenerationCodeTool.InterFace;
+using GenerationCodeTool.Implement;
 
 namespace GenerationCodeTool
 {
@@ -22,6 +24,17 @@ namespace GenerationCodeTool
         public Main()
         {
             InitializeComponent();
+            this.init();
+        }
+
+        /// <summary>
+        /// 初始化方法
+        /// </summary>
+        private void init()
+        {
+            //this.txtSave.Text = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + DefaultSetting._Path;
+            this.txtSave.Text = "C:\\MyGeneration" + DefaultSetting._Path;
+
         }
 
         /// <summary>
@@ -37,16 +50,78 @@ namespace GenerationCodeTool
 
         }
 
-        /// <summary>
-        /// 饼图
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnPie_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             try
             {
+                #region 校验
 
+                if (string.IsNullOrWhiteSpace(this.txtSave.Text))
+                {
+                    MessageBox.Show("保存路径不能为空！");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(this.txtSelect.Text))
+                {
+                    MessageBox.Show("请选择XML文件！");
+                    return;
+                }
+
+                if (!File.Exists(this.txtSelect.Text))
+                {
+                    MessageBox.Show("选择的XML文件不存在！");
+                    return;
+                }
+
+
+#if DEBUG
+                this.txtModule.Text = string.IsNullOrWhiteSpace(this.txtModule.Text) ? "generation" : this.txtModule.Text;
+                this.txtPrimaryPath.Text = string.IsNullOrWhiteSpace(this.txtPrimaryPath.Text) ? "generation" : this.txtPrimaryPath.Text;
+#endif
+
+                if (string.IsNullOrWhiteSpace(this.txtPrimaryPath.Text))
+                {
+                    MessageBox.Show("一级名称不能为空！");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(this.txtModule.Text))
+                {
+                    MessageBox.Show("模块名不能为空！");
+                    return;
+                }
+
+                #endregion
+
+                // 序列化XML
+                StringReader xmlReader = Utils.XmlUtil.getStrXml(this.txtSelect.Text);
+                XmlSerializer xmlSer = new XmlSerializer(typeof(GenerationModel));
+                GenerationModel generationModel = (GenerationModel)xmlSer.Deserialize(xmlReader);
+                xmlReader.Close();
+
+                if (generationModel == null)
+                {
+                    MessageBox.Show("序列化XML文件存在问题，请检查格式!");
+                    return;
+                }
+                IModule module;
+
+                if (generationModel.DataArea.GridIsShow == (int)DefaultSetting.IsShow.YES
+                    && generationModel.DataArea.ChartIsShow == (int)DefaultSetting.IsShow.NO)
+                {
+                    // 新建一个只有列表的模块
+                    module = new GridImpl();
+                }
+                else
+                {
+                    module = new GridImpl();
+                }
+                GeneralPropertyModel generalPropertyModel = new GeneralPropertyModel();
+                generalPropertyModel.GenerationModel = generationModel;
+                generalPropertyModel.Path = this.txtSave.Text;
+                generalPropertyModel.MoudleName = this.txtModule.Text;
+                module.Init(generalPropertyModel);
             }
             catch (Exception ex)
             {
@@ -55,15 +130,19 @@ namespace GenerationCodeTool
         }
 
         /// <summary>
-        /// 柱状图
+        /// 选择文件按钮
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnColumn_Click(object sender, EventArgs e)
+        private void btnSelectPath_Click(object sender, EventArgs e)
         {
             try
             {
-  
+                FolderBrowserDialog folder = new FolderBrowserDialog();
+                if (folder.ShowDialog() == DialogResult.OK)
+                {
+                    this.txtSave.Text = folder.SelectedPath;
+                }
             }
             catch (Exception ex)
             {
@@ -72,24 +151,7 @@ namespace GenerationCodeTool
         }
 
         /// <summary>
-        /// 列表
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnGrid_Click(object sender, EventArgs e)
-        {
-            try
-            {
- 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        /// <summary>
-        /// 饼图读取xml
+        /// 选择路径按钮
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -97,47 +159,17 @@ namespace GenerationCodeTool
         {
             try
             {
-
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "XML文件 (*.xml)|*.xml";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    this.txtSelect.Text = dialog.FileName;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        /// <summary>
-        /// 柱状图读取xml
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void loadColumn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        /// <summary>
-        /// 列表读取xml
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnLoadGrid_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            StringReader xmlReader = Utils.XmlUtil.getStrXml(@"c:\StandardXml\test.xml");
-            XmlSerializer xmlSer = new XmlSerializer(typeof(GenerationModel));
-            GenerationModel generationModel = (GenerationModel)xmlSer.Deserialize(xmlReader);
-            xmlReader.Close();
         }
     }
 }
